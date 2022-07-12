@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap');
+
+.DiaryPage {
+
+}
+
+.DiaryPage section {
+    width: 100%;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.DiaryPage h4 {
+    font-size: 22px;
+}
+
+.DiaryPage .diary_img_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.DiaryPage img {
+    width: 50%;
+    height: 50%;
+}
+
+.DiaryPage .what_detail {
+    font-size: 25px;
+}
+
+.DiaryPage .diary_content_wrapper {
+    width: 100%;
+    background-color: #ececec;
+    border-radius: 5px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.DiaryPage .diary_content_wrapper p {
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Gothic A1', sans-serif;
+    line-height: 2.5;
+}

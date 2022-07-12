@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap');
+
+.Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.Home button {
+    position: fixed;
+    cursor: pointer;
+    margin: 0;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: 50px;
+    bottom: 5%;
+    z-index: 100;
+    font-size: 23px;
+}

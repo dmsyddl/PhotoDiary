@@ -1,38 +1,60 @@
-/* .App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap');
+/*#BBC4C7*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #BBC4C7;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Gothic A1', sans-serif;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  width: 85vw;
+  height: 90vh;
+  padding: 20px;
+  font-family: 'Gothic A1', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* #root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 } */
+
+/* button css
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  padding: 10px 10px 20px 20px;
+
+  font-size: 18px;
+  white-space: nowrap;
+  font-family: 'Gothic A1', sans-serif;
+} */
+
+/* Header */
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+}
+
+.header > div {
+  display: flex;
+}
+
+.header .date {
+  width: 50%;
+  font-size: 25px;
+  justify-content: start;
+}
+
+.header .weather {
+  width: 50%;
+  font-size: 25px;
+  justify-content: end;
+}

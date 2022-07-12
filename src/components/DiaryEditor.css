@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap');
+
+.DiaryEditor {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.DiaryEditor section {
+    margin-bottom: 40px;
+}
+
+.DiaryEditor h4 {
+    font-size: 22px;
+}
+
+.DiaryEditor .input_date {
+    border: none;
+    border-radius: 5px;
+    background-color: #ececec;
+    font-size: 20px;
+}
+
+.DiaryEditor button {
+    border: none;
+    right: 50px;
+    bottom: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px
+}
+
+.DiaryEditor .input_box_whatlist_wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 1%;
+}
+
+.DiaryEditor textarea {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 20px;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #ececec;
+
+    padding: 20px;
+}
+
+.DiaryEditor .ending_box {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}

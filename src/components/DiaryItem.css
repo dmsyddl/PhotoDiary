@@ -1,0 +1,24 @@
+.DiaryItem {
+    cursor: pointer;
+    background-color: #FBF7F0;
+    width: 250px;
+    height: 300px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.DiaryItem img {
+    width: 200px;
+    height: 240px;
+}
+
+.DiaryItem .diary_date {
+    flex-grow: 1;
+    margin-left: 5px;
+    font-size: 18px;
+}
