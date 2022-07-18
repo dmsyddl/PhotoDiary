@@ -94,7 +94,7 @@ const DiaryEditor = ({isEdit, originData}) => {
             setContent(originData.content);
             //isEdit = false;
         }
-    }, [originData])
+    }, [isEdit, originData])
 
     return (
     <div className="DiaryEditor">
