@@ -18,7 +18,7 @@ export const getStringDate = (date) => {
     if (day < 10) {
       day = `0${day}`;
     }
-    return `${year}-${month}-${day}`;
+    return `${year}.${month}.${day}`;
 };
 
 const whatList = [
@@ -62,7 +62,7 @@ const DiaryEditor = ({isEdit, originData}) => {
     const handleClickWhat = (what) => {
         setWhat(what);
     }
-    const { onCreate, onEdit } = useContext(DiaryDispatchContext);
+    const { onCreate, onEdit, onRemove } = useContext(DiaryDispatchContext);
 
     const handleSubmit = () => {
         if(content.length === 0) {
@@ -75,9 +75,16 @@ const DiaryEditor = ({isEdit, originData}) => {
             }
             else {
                 onEdit(originData.id, date, content, what);
+                console.log("수정완료");
             }
         }
         navigate('/');
+    }
+    const handleRemeove = () => {
+        if(window.confirm("일기를 삭제하시겠습니까?")) {
+            onRemove(originData.id)
+            navigate('/');
+        }
     }
 
     useEffect(() => {
@@ -85,15 +92,16 @@ const DiaryEditor = ({isEdit, originData}) => {
             setDate(getStringDate(new Date(parseInt(originData.date))));
             setWhat(originData.what);
             setContent(originData.content);
+            //isEdit = false;
         }
-    }, [isEdit, originData])
+    }, [originData])
 
     return (
     <div className="DiaryEditor">
-        {/* <Header
-        headDate={"New Memory"}
-        headWeather={"날씨 정보 API"}
-        /> */}
+        <Header
+        //headDate={isEdit && (<button onClick={handleSubmit}>EDIT</button>)}
+        headWeather={isEdit && (<button onClick={handleRemeove}>DELETE</button>)}
+        />
         <div>
             <section>
                 <h4>Today is...</h4>
