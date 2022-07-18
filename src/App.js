@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useReducer, useRef } from 'react';
+import React, { useEffect, useReducer, useRef } from 'react';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -32,12 +32,13 @@ const reducer = (state, action) => {
       break;
     }
     case 'EDIT': {
-      newState = state.map((el)=>el.id === action.targetId ? [...action.data] : el);
+      newState = state.map((el)=>el.id === action.targetId ? action.data : el);
       break;
     }
     default:
       return state;
   }
+  localStorage.setItem('diary', JSON.stringify(newState))
   return newState;
 };
 
@@ -80,8 +81,19 @@ const dummyData = [
 
 function App() {
 
-  const [data, dispatch] = useReducer(reducer, dummyData);
-  const dataId = useRef(0);
+  const [data, dispatch] = useReducer(reducer, []);
+
+  useEffect(() => {
+    const localData = localStorage.getItem('diary');
+    if(localData) {
+      const diaryList = JSON.parse(localData).sort((a, b) => parseInt(b.id) - parseInt(a.id));
+      dataId.current = parseInt(diaryList[0].id) + 1;
+
+      dispatch({type:"INIT", data: diaryList});
+    } 
+  }, []);
+  
+  const dataId = useRef(6); // dummydata값이 1~5까지 존재하므로 6부터 시작해야 key가 겹치는 에러를 해결할 수 있다
   // create : 일기 생성
   const onCreate = (date, content, what) => {
     dispatch({
