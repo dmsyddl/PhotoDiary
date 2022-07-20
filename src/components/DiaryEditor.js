@@ -75,7 +75,7 @@ const DiaryEditor = ({isEdit, originData}) => {
             }
             else {
                 onEdit(originData.id, date, content, what);
-                console.log("수정완료");
+                // console.log("수정완료");
             }
         }
         navigate('/');
@@ -93,6 +93,7 @@ const DiaryEditor = ({isEdit, originData}) => {
             setWhat(originData.what);
             setContent(originData.content);
             //isEdit = false;
+           // console.log("수정되고잇니?")
         }
     }, [isEdit, originData])
 

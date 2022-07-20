@@ -58,7 +58,7 @@ const Home = () => {
     <div className="Home ">
         <Header 
         headDate={text}
-        headWeather={"날씨정보API예정"}
+        headWeather={""}
         />
         <DiaryList diaryList={data}/>
         <button onClick={() => navigate("/new")}><FaPlus className="icon" /></button>

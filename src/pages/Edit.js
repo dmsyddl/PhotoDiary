@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { FaRegArrowAltCircleDown } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
 import { DiaryStateContext } from "../App";
 
@@ -15,7 +14,7 @@ const Edit = () => {
     useEffect(() => {
         if(diaryList.length >= 1) {
             const targetDiary = diaryList.find((el) => parseInt(el.id) === parseInt(id));
-            console.log(targetDiary)
+            //console.log(targetDiary)
             if(targetDiary) {
                 setOriginData(targetDiary);
             }

@@ -20,7 +20,7 @@ export const getStringDate = (date) => {
     if (day < 10) {
       day = `0${day}`;
     }
-    return `${year}-${month}-${day}`;
+    return `${year}.${month}.${day}`;
 };
 
 const Diary = () => {
@@ -50,7 +50,7 @@ const Diary = () => {
         return (
             <div className="DiaryPage">
                 <Header 
-                headDate={`${getStringDate(new Date(data.date))} memory`}
+                headDate={`${getStringDate(new Date(data.date))} Memory`}
                 headWeather={<button onClick={() => navigate(`/edit/${data.id}`)}>EDIT</button>}/>
                 <article>
                     <section>
